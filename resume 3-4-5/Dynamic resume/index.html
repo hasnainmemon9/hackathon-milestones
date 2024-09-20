@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <h1 class="heading">DYNAMIC<br>RESUME BUILDER</h1>
+
+  <form id="resume-form">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter Your Name" required />
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter Your Username" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter Your Email" required />
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="Enter Your Phone Number" required />
+    </fieldset>
+    <fieldset id="education-fieldset">
+      <legend>Education</legend>
+      <div id="education-container">
+        <textarea id="education-textarea" class="edit-textarea" placeholder="Enter Your Education" rows="4"></textarea>
+        <button type="button" id="education-edit-button" class="button">Edit</button>
+        <button type="button" id="education-done-button" style="display: none" class="button">Done</button>
+      </div>
+    </fieldset>
+    <fieldset id="experience-fieldset">
+      <legend>Experience</legend>
+      <div id="experience-container">
+        <textarea id="experience-textarea" class="edit-textarea" placeholder="Enter Your Work Experience" rows="4"></textarea>
+        <button type="button" id="experience-edit-button" class="button">Edit</button>
+        <button type="button" id="experience-done-button" style="display: none" class="button">Done</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Skills</legend>
+      <label for="skills"></label>
+      <textarea id="skills" placeholder="Enter Your Skills" rows="4" required></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Picture</legend>
+      <label for="picture">Select a picture</label>
+      <input type="file" id="picture" accept="image/*" required />
+    </fieldset>
+    <button type="submit" id="gen-button"><b>Generate Resume</b></button>
+  </form>
+  <br />
+  <div id="resume-display"></div>
+  <div>
+    <button class="pdf-button" id="pdf-button"><b>Download as PDF</b></button>
+  </div>
+  <div id="shareable-link-container" >
+    <h2>Shareable Link</h2>
+    <a href="#" id="shareable-link" target="_blank"></a>
+  </div>
+  <script src="resume.js"></script>
+</body>
+</html> 
+
